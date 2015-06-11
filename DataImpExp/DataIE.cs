@@ -15,6 +15,7 @@ namespace DataImpExp
 
         public static void KillProgress(string progressName, DateTime dBegin, DateTime dEnd)
         {
+
             System.Diagnostics.Process[] myPros = null;
             DateTime dtime;
             myPros = System.Diagnostics.Process.GetProcessesByName(progressName);
