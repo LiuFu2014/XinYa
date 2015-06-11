@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E563E1B0-4B07-4A82-A5FE-FD96691B04EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XinYa</RootNamespace>
+    <AssemblyName>XinYa</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\项目资料\鑫亚\开发\publish\XinYa\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\Xinyaserver\软件更新\XinYa\</InstallUrl>
+    <UpdateUrl>\\WINDOWS-37WQPG6\XinYa2\</UpdateUrl>
+    <TargetCulture>zh-CN</TargetCulture>
+    <ProductName>流水线信息化主程序</ProductName>
+    <PublisherName>SunEast</PublisherName>
+    <SuiteName>鑫亚软控</SuiteName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>未标题-4-img2ico.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8ECC116570883F453487B4F768108CD0326AC82A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>XinYa_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NPOI">
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>DLL\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>DLL\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>DLL\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BarCode.cs" />
+    <Compile Include="BLL\BarCodeHelper.cs" />
+    <Compile Include="BLL\BllHelp.cs" />
+    <Compile Include="BLL\ExportData.cs" />
+    <Compile Include="BLL\frm_MaterialSelectHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLL\frm_MaterialSelectHelper.Designer.cs">
+      <DependentUpon>frm_MaterialSelectHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\LogExecute.cs" />
+    <Compile Include="BLL\NPOIHelper.cs" />
+    <Compile Include="BLL\SystemLogHelper.cs" />
+    <Compile Include="BLL\UpdateTime.cs" />
+    <Compile Include="DAL\DBHelp.cs" />
+    <Compile Include="DAL\XinYaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XinYaDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ExceptionStaByDate.cs" />
+    <Compile Include="Model\ExceptionStaByType.cs" />
+    <Compile Include="Model\QCRecordModelForQCTrack.cs" />
+    <Compile Include="Model\QualifiedRate_Fanxiu_Worker.cs" />
+    <Compile Include="Model\QualifiedRate_Zhuangpei_LineNum.cs" />
+    <Compile Include="Model\QualifiedRate_Zhuangpei_Mat.cs" />
+    <Compile Include="Model\QualifiedRate_Tiaoshi_Worker.cs" />
+    <Compile Include="Model\WorkDtlWithBengsWorkStationWorkTime.cs" />
+    <Compile Include="Model\WorkDtlWithRepairRecord.cs" />
+    <Compile Include="Model\WorkDtlWithScanRecord.cs" />
+    <Compile Include="Model\WorkerTime.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_ExceptionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_ExceptionInfo.Designer.cs">
+      <DependentUpon>frm_ExceptionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_KeyComponentsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_KeyComponentsInfo.Designer.cs">
+      <DependentUpon>frm_KeyComponentsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialAudit.Designer.cs">
+      <DependentUpon>frm_MaterialAudit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialInfoBQDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialInfoBQDtl.Designer.cs">
+      <DependentUpon>frm_MaterialInfoBQDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialInfoVEDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialInfoVEDtl.Designer.cs">
+      <DependentUpon>frm_MaterialInfoVEDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_MaterialInfo.Designer.cs">
+      <DependentUpon>frm_MaterialInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_PalletInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_PalletInfo.Designer.cs">
+      <DependentUpon>frm_PalletInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_WorkTimeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseInfo\frm_WorkTimeInfo.Designer.cs">
+      <DependentUpon>frm_WorkTimeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Helper\frm_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Helper\frm_About.Designer.cs">
+      <DependentUpon>frm_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_ExceptionSelectHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_ExceptionSelectHelper.Designer.cs">
+      <DependentUpon>frm_ExceptionSelectHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_ExceptionStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_ExceptionStatistics.Designer.cs">
+      <DependentUpon>frm_ExceptionStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_HistoryWorkRecordSer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_HistoryWorkRecordSer.Designer.cs">
+      <DependentUpon>frm_HistoryWorkRecordSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_HistoryWorkTaskSer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_HistoryWorkTaskSer.Designer.cs">
+      <DependentUpon>frm_HistoryWorkTaskSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_CompleteStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_CompleteStatistics.Designer.cs">
+      <DependentUpon>frm_CompleteStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_MaterialSelectHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_MaterialSelectHelper.Designer.cs">
+      <DependentUpon>frm_MaterialSelectHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_QualifiedRateStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_QualifiedRateStatistics.Designer.cs">
+      <DependentUpon>frm_QualifiedRateStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\frm_UserSelectHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BLL\frm_UserSelectHelper.Designer.cs">
+      <DependentUpon>frm_UserSelectHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_SQSer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_SQSer.Designer.cs">
+      <DependentUpon>frm_SQSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_WorkTimeStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InfoSearch\frm_WorkTimeStatistics.Designer.cs">
+      <DependentUpon>frm_WorkTimeStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Other\frm_Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\frm_SystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Sys\frm_SystemLog.Designer.cs">
+      <DependentUpon>frm_SystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\frm_AuthorityInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\frm_AuthorityInfo.Designer.cs">
+      <DependentUpon>frm_AuthorityInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\frm_ERPUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\frm_ERPUserInfo.Designer.cs">
+      <DependentUpon>frm_ERPUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\frm_LoginInOutRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\frm_LoginInOutRecord.Designer.cs">
+      <DependentUpon>frm_LoginInOutRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\frm_SetAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\frm_SetAuthority.Designer.cs">
+      <DependentUpon>frm_SetAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User\frm_WorkerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User\frm_WorkerInfo.Designer.cs">
+      <DependentUpon>frm_WorkerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_KeyComponentsBanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_KeyComponentsBanding.Designer.cs">
+      <DependentUpon>frm_KeyComponentsBanding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_KeyComponentsSer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_KeyComponentsSer.Designer.cs">
+      <DependentUpon>frm_KeyComponentsSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_LEDTestSender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_LEDTestSender.Designer.cs">
+      <DependentUpon>frm_LEDTestSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProcessRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProcessRoute.Designer.cs">
+      <DependentUpon>frm_ProcessRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProcessRouteAddOrEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProcessRouteAddOrEdit.Designer.cs">
+      <DependentUpon>frm_ProcessRouteAddOrEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlan.Designer.cs">
+      <DependentUpon>frm_ProductionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlanFomERP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlanFomERP.Designer.cs">
+      <DependentUpon>frm_ProductionPlanFomERP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlanFomERPSer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlanFomERPSer.Designer.cs">
+      <DependentUpon>frm_ProductionPlanFomERPSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlanFromERPForCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_ProductionPlanFromERPForCRUD.Designer.cs">
+      <DependentUpon>frm_ProductionPlanFromERPForCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_QCTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_QCTrack.Designer.cs">
+      <DependentUpon>frm_QCTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkFlowCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkFlowCenter.Designer.cs">
+      <DependentUpon>frm_WorkFlowCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkFlowInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkFlowInfo.Designer.cs">
+      <DependentUpon>frm_WorkFlowInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkTast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkTast.Designer.cs">
+      <DependentUpon>frm_WorkTast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkTimeBandingInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkManagement\frm_WorkTimeBandingInfo.Designer.cs">
+      <DependentUpon>frm_WorkTimeBandingInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkStation\frm_WorkStationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkStation\frm_WorkStationInfo.Designer.cs">
+      <DependentUpon>frm_WorkStationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WorkStation\frm_WorkStationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WorkStation\frm_WorkStationView.Designer.cs">
+      <DependentUpon>frm_WorkStationView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BLL\frm_MaterialSelectHelper.resx">
+      <DependentUpon>frm_MaterialSelectHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\BaseInfo\frm_ExceptionInfo.resx">
+      <DependentUpon>frm_ExceptionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_KeyComponentsInfo.resx">
+      <DependentUpon>frm_KeyComponentsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_MaterialAudit.resx">
+      <DependentUpon>frm_MaterialAudit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_MaterialInfoBQDtl.resx">
+      <DependentUpon>frm_MaterialInfoBQDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_MaterialInfoVEDtl.resx">
+      <DependentUpon>frm_MaterialInfoVEDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_MaterialInfo.resx">
+      <DependentUpon>frm_MaterialInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_PalletInfo.resx">
+      <DependentUpon>frm_PalletInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseInfo\frm_WorkTimeInfo.resx">
+      <DependentUpon>frm_WorkTimeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Helper\frm_About.resx">
+      <DependentUpon>frm_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_CompleteStatistics.resx">
+      <DependentUpon>frm_CompleteStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_ExceptionSelectHelper.resx">
+      <DependentUpon>frm_ExceptionSelectHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_ExceptionStatistics.resx">
+      <DependentUpon>frm_ExceptionStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_HistoryWorkRecordSer.resx">
+      <DependentUpon>frm_HistoryWorkRecordSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_HistoryWorkTaskSer.resx">
+      <DependentUpon>frm_HistoryWorkTaskSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_MaterialSelectHelper.resx">
+      <DependentUpon>frm_MaterialSelectHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_QualifiedRateStatistics.resx">
+      <DependentUpon>frm_QualifiedRateStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BLL\frm_UserSelectHelper.resx">
+      <DependentUpon>frm_UserSelectHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_SQSer.resx">
+      <DependentUpon>frm_SQSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InfoSearch\frm_WorkTimeStatistics.resx">
+      <DependentUpon>frm_WorkTimeStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Other\frm_Calculator.resx">
+      <DependentUpon>frm_Calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Sys\frm_SystemLog.resx">
+      <DependentUpon>frm_SystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\frm_AuthorityInfo.resx">
+      <DependentUpon>frm_AuthorityInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\frm_ERPUserInfo.resx">
+      <DependentUpon>frm_ERPUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\frm_LoginInOutRecord.resx">
+      <DependentUpon>frm_LoginInOutRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\User\frm_WorkerInfo.resx">
+      <DependentUpon>frm_WorkerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_KeyComponentsBanding.resx">
+      <DependentUpon>frm_KeyComponentsBanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_KeyComponentsSer.resx">
+      <DependentUpon>frm_KeyComponentsSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_LEDTestSender.resx">
+      <DependentUpon>frm_LEDTestSender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_ProcessRoute.resx">
+      <DependentUpon>frm_ProcessRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_ProcessRouteAddOrEdit.resx">
+      <DependentUpon>frm_ProcessRouteAddOrEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_ProductionPlan.resx">
+      <DependentUpon>frm_ProductionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_ProductionPlanFomERP.resx">
+      <DependentUpon>frm_ProductionPlanFomERP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_ProductionPlanFomERPSer.resx">
+      <DependentUpon>frm_ProductionPlanFomERPSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_ProductionPlanFromERPForCRUD.resx">
+      <DependentUpon>frm_ProductionPlanFromERPForCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_QCTrack.resx">
+      <DependentUpon>frm_QCTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_WorkFlowCenter.resx">
+      <DependentUpon>frm_WorkFlowCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_WorkFlowInfo.resx">
+      <DependentUpon>frm_WorkFlowInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_WorkTast.resx">
+      <DependentUpon>frm_WorkTast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkManagement\frm_WorkTimeBandingInfo.resx">
+      <DependentUpon>frm_WorkTimeBandingInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkStation\frm_WorkStationInfo.resx">
+      <DependentUpon>frm_WorkStationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\WorkStation\frm_WorkStationView.resx">
+      <DependentUpon>frm_WorkStationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DAL\XinYaDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>XinYaDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\XinYa.DAL.XinYaDBEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServiceReference1\metadata.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\metadata1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\metadata2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\metadata3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\metadata4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\metadata5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <None Include="Service References\ServiceReference1\XinYa.ServiceReference1.TB_PLCBaseAdressInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="XinYa_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Rpt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\Interop.Excel.dll" />
+    <Content Include="DLL\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="DLL\Interop.Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="DLL\Interop.Office.dll" />
+    <Content Include="DLL\Lee.Barcode.dll" />
+    <Content Include="DLL\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Resources\addnewr.gif" />
+    <Content Include="Resources\deleterecr.gif" />
+    <Content Include="Resources\editrowr.gif" />
+    <Content Include="Resources\excel.gif" />
+    <Content Include="Resources\PExit.gif" />
+    <Content Include="Resources\ToExcel.gif" />
+    <Content Include="Resources\WMS_4.JPG" />
+    <Content Include="Resources\XinYaLogo.jpg" />
+    <Content Include="Resources\登录背景.jpg" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Test\test.xml" />
+    <Content Include="未标题-4-img2ico.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Test\test.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

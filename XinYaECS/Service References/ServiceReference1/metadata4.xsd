@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.8:8989/wcf/metadata?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:import schemaLocation="http://192.168.1.8:8989/wcf/metadata?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EntityObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q1:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityObject" nillable="true" type="tns:EntityObject" />
+  <xs:complexType name="StructuralObject">
+    <xs:sequence />
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
+  <xs:complexType name="EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_SecondWorkStationInfo" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+  <xs:complexType name="EntityReference">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RelatedEnd">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="EntityKey" nillable="true" type="q2:EntityKey" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReference" nillable="true" type="tns:EntityReference" />
+  <xs:complexType name="RelatedEnd">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RelatedEnd" nillable="true" type="tns:RelatedEnd" />
+  <xs:complexType name="EntityReferenceOfTB_ExceptionElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_Exception" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_ExceptionElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_ExceptionElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_UserElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_User" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_UserElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_UserElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_WorkMainElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_WorkMain" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_WorkMainElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_WorkMainElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_WorkDtlForEachStationElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_WorkDtlForEachStation" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_WorkDtlForEachStationElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_WorkDtlForEachStationElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_MaterialInfoElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_MaterialInfo" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_MaterialInfoElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_MaterialInfoElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_ProcessRouteMElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_ProcessRouteM" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_ProcessRouteMElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_ProcessRouteMElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_WorkStationInfoElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_WorkStationInfo" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_WorkStationInfoElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_WorkStationInfoElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_WorkDtlElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_WorkDtl" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_WorkDtlElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_WorkDtlElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_KeyComponentsInfoElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_KeyComponentsInfo" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_KeyComponentsInfoElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_KeyComponentsInfoElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_WorkClassesElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_WorkClasses" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_WorkClassesElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_WorkClassesElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_PLCAdressWithWorkStationInfoElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_PLCAdressWithWorkStationInfo" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_PLCAdressWithWorkStationInfoElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_PLCAdressWithWorkStationInfoElG_Pkl9z" />
+  <xs:complexType name="EntityReferenceOfTB_PLCAdressWithStopperElG_Pkl9z">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="EntityReferenceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TB_PLCAdressWithStopper" Namespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EntityReference">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityReferenceOfTB_PLCAdressWithStopperElG_Pkl9z" nillable="true" type="tns:EntityReferenceOfTB_PLCAdressWithStopperElG_Pkl9z" />
+</xs:schema>

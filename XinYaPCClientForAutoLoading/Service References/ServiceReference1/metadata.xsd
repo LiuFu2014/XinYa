@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/XinYaWcfServiceForPLCAndWorks" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.8:8989/wcf/metadata?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="TB_WorkMain">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Finished" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FinishedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FinishedMen" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FinishedType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsCommit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PalletCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationIDForComplete" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SecondWorkStationIDForNew" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo1" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo1Reference" nillable="true" type="q1:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q1:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_User1" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_User1Reference" nillable="true" type="q1:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q1:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:ArrayOfTB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkDtlForEachStation" nillable="true" type="tns:ArrayOfTB_WorkDtlForEachStation" />
+          <xs:element minOccurs="0" name="WorkID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkMainID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkMain" nillable="true" type="tns:TB_WorkMain" />
+  <xs:complexType name="TB_SecondWorkStationInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdressCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AdressID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsUse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="No" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NoInStopper" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberClassPerDay" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_LoginRecord" nillable="true" type="tns:ArrayOfTB_LoginRecord" />
+          <xs:element minOccurs="0" name="TB_PLCAdressWithWorkStationInfo" nillable="true" type="tns:TB_PLCAdressWithWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_PLCAdressWithWorkStationInfoReference" nillable="true" type="q2:EntityReferenceOfTB_PLCAdressWithWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_PLCBaseAdressInfo" nillable="true" type="tns:ArrayOfTB_PLCBaseAdressInfo" />
+          <xs:element minOccurs="0" name="TB_QCRecord" nillable="true" type="tns:ArrayOfTB_QCRecord" />
+          <xs:element minOccurs="0" name="TB_ScanRecord" nillable="true" type="tns:ArrayOfTB_ScanRecord" />
+          <xs:element minOccurs="0" name="TB_UserLoginRight" nillable="true" type="tns:ArrayOfTB_UserLoginRight" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:ArrayOfTB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkDtlForEachStation" nillable="true" type="tns:ArrayOfTB_WorkDtlForEachStation" />
+          <xs:element minOccurs="0" name="TB_WorkException" nillable="true" type="tns:ArrayOfTB_WorkException" />
+          <xs:element minOccurs="0" name="TB_WorkMain" nillable="true" type="tns:ArrayOfTB_WorkMain" />
+          <xs:element minOccurs="0" name="TB_WorkMain1" nillable="true" type="tns:ArrayOfTB_WorkMain" />
+          <xs:element minOccurs="0" name="TB_WorkStationInfo" nillable="true" type="tns:TB_WorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_WorkStationInfoReference" nillable="true" type="q2:EntityReferenceOfTB_WorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkTime" nillable="true" type="tns:ArrayOfTB_WorkTime" />
+          <xs:element minOccurs="0" name="TB_WorkTimeBandingInfo" nillable="true" type="tns:ArrayOfTB_WorkTimeBandingInfo" />
+          <xs:element minOccurs="0" name="WorkStationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkStationStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkeTimePerClass" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+  <xs:complexType name="ArrayOfTB_LoginRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_LoginRecord" nillable="true" type="tns:TB_LoginRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_LoginRecord" nillable="true" type="tns:ArrayOfTB_LoginRecord" />
+  <xs:complexType name="TB_LoginRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="LoginInTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LoginOutTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ServicePosition" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q3:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q3:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_LoginRecord" nillable="true" type="tns:TB_LoginRecord" />
+  <xs:complexType name="TB_User">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HouseAddress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsUse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_Exception" nillable="true" type="tns:ArrayOfTB_Exception" />
+          <xs:element minOccurs="0" name="TB_KeyComponentsInfo" nillable="true" type="tns:ArrayOfTB_KeyComponentsInfo" />
+          <xs:element minOccurs="0" name="TB_LoginRecord" nillable="true" type="tns:ArrayOfTB_LoginRecord" />
+          <xs:element minOccurs="0" name="TB_MatCodeKeyComLink" nillable="true" type="tns:ArrayOfTB_MatCodeKeyComLink" />
+          <xs:element minOccurs="0" name="TB_MaterialInfo" nillable="true" type="tns:ArrayOfTB_MaterialInfo" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteM" nillable="true" type="tns:ArrayOfTB_ProcessRouteM" />
+          <xs:element minOccurs="0" name="TB_ProductionPlan" nillable="true" type="tns:ArrayOfTB_ProductionPlan" />
+          <xs:element minOccurs="0" name="TB_ProductionPlanFromERP" nillable="true" type="tns:ArrayOfTB_ProductionPlanFromERP" />
+          <xs:element minOccurs="0" name="TB_QCRecord" nillable="true" type="tns:ArrayOfTB_QCRecord" />
+          <xs:element minOccurs="0" name="TB_RepairRecord" nillable="true" type="tns:ArrayOfTB_RepairRecord" />
+          <xs:element minOccurs="0" name="TB_ScanRecord" nillable="true" type="tns:ArrayOfTB_ScanRecord" />
+          <xs:element minOccurs="0" name="TB_SystemLog" nillable="true" type="tns:ArrayOfTB_SystemLog" />
+          <xs:element minOccurs="0" name="TB_UserLoginRight" nillable="true" type="tns:ArrayOfTB_UserLoginRight" />
+          <xs:element minOccurs="0" name="TB_WorkClasses" nillable="true" type="tns:TB_WorkClasses" />
+          <xs:element minOccurs="0" name="TB_WorkClassesReference" nillable="true" type="q4:EntityReferenceOfTB_WorkClassesElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:ArrayOfTB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkDtlForEachStation" nillable="true" type="tns:ArrayOfTB_WorkDtlForEachStation" />
+          <xs:element minOccurs="0" name="TB_WorkException" nillable="true" type="tns:ArrayOfTB_WorkException" />
+          <xs:element minOccurs="0" name="TB_WorkMain" nillable="true" type="tns:ArrayOfTB_WorkMain" />
+          <xs:element minOccurs="0" name="TB_WorkMain1" nillable="true" type="tns:ArrayOfTB_WorkMain" />
+          <xs:element minOccurs="0" name="TB_WorkTime" nillable="true" type="tns:ArrayOfTB_WorkTime" />
+          <xs:element minOccurs="0" name="TB_WorkTimeBandingInfo" nillable="true" type="tns:ArrayOfTB_WorkTimeBandingInfo" />
+          <xs:element minOccurs="0" name="TB_WorkTimeBandingInfo1" nillable="true" type="tns:ArrayOfTB_WorkTimeBandingInfo" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkClassesID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_User" nillable="true" type="tns:TB_User" />
+  <xs:complexType name="ArrayOfTB_Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_Exception" nillable="true" type="tns:TB_Exception" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_Exception" nillable="true" type="tns:ArrayOfTB_Exception" />
+  <xs:complexType name="TB_Exception">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ExceptionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExceptionText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_QCRecord" nillable="true" type="tns:ArrayOfTB_QCRecord" />
+          <xs:element minOccurs="0" name="TB_RepairRecord" nillable="true" type="tns:ArrayOfTB_RepairRecord" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q5:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:ArrayOfTB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkException" nillable="true" type="tns:ArrayOfTB_WorkException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_Exception" nillable="true" type="tns:TB_Exception" />
+  <xs:complexType name="ArrayOfTB_QCRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_QCRecord" nillable="true" type="tns:TB_QCRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_QCRecord" nillable="true" type="tns:ArrayOfTB_QCRecord" />
+  <xs:complexType name="TB_QCRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExceptionID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsQualified" type="xs:boolean" />
+          <xs:element minOccurs="0" name="QCDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="QCSecondWorkStationID" type="xs:int" />
+          <xs:element minOccurs="0" name="QCWorkerID" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_Exception" nillable="true" type="tns:TB_Exception" />
+          <xs:element minOccurs="0" name="TB_ExceptionReference" nillable="true" type="q6:EntityReferenceOfTB_ExceptionElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q6:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q6:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtlForEachStation" nillable="true" type="tns:TB_WorkDtlForEachStation" />
+          <xs:element minOccurs="0" name="TB_WorkDtlForEachStationReference" nillable="true" type="q6:EntityReferenceOfTB_WorkDtlForEachStationElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkDtlForEachStationID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_QCRecord" nillable="true" type="tns:TB_QCRecord" />
+  <xs:complexType name="TB_WorkDtlForEachStation">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_QCRecord" nillable="true" type="tns:ArrayOfTB_QCRecord" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q7:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q7:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkMain" nillable="true" type="tns:TB_WorkMain" />
+          <xs:element minOccurs="0" name="TB_WorkMainReference" nillable="true" type="q7:EntityReferenceOfTB_WorkMainElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkBeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkMainID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkMen" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkDtlForEachStation" nillable="true" type="tns:TB_WorkDtlForEachStation" />
+  <xs:complexType name="ArrayOfTB_RepairRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_RepairRecord" nillable="true" type="tns:TB_RepairRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_RepairRecord" nillable="true" type="tns:ArrayOfTB_RepairRecord" />
+  <xs:complexType name="TB_RepairRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExceptionID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsScrap" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_Exception" nillable="true" type="tns:TB_Exception" />
+          <xs:element minOccurs="0" name="TB_ExceptionReference" nillable="true" type="q8:EntityReferenceOfTB_ExceptionElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q8:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:TB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkDtlReference" nillable="true" type="q8:EntityReferenceOfTB_WorkDtlElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkDtlID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkerID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_RepairRecord" nillable="true" type="tns:TB_RepairRecord" />
+  <xs:complexType name="TB_WorkDtl">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EditTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExceptionSecondWorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsException" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MaterialCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaterialID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PalletCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_Exception" nillable="true" type="tns:TB_Exception" />
+          <xs:element minOccurs="0" name="TB_ExceptionReference" nillable="true" type="q9:EntityReferenceOfTB_ExceptionElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_MaterialInfo" nillable="true" type="tns:TB_MaterialInfo" />
+          <xs:element minOccurs="0" name="TB_MaterialInfoReference" nillable="true" type="q9:EntityReferenceOfTB_MaterialInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_RepairRecord" nillable="true" type="tns:ArrayOfTB_RepairRecord" />
+          <xs:element minOccurs="0" name="TB_ScanRecord" nillable="true" type="tns:ArrayOfTB_ScanRecord" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q9:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q9:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkException" nillable="true" type="tns:ArrayOfTB_WorkException" />
+          <xs:element minOccurs="0" name="TB_WorkMain" nillable="true" type="tns:TB_WorkMain" />
+          <xs:element minOccurs="0" name="TB_WorkMainReference" nillable="true" type="q9:EntityReferenceOfTB_WorkMainElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkMainID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkStatus" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkStatusEditor" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkDtl" nillable="true" type="tns:TB_WorkDtl" />
+  <xs:complexType name="TB_MaterialInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BQCiganxingchen1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQCiganxingchen9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQMohehouzhuanggaiban" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQRemark9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQShigaoyajinzuohumao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQShuyoubeng" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQShuyoubengzhijia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQTingchelaxianzhijia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BQZhuanghougaiban" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Chuyoufa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Class" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Dinghuobianhao" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gongkuang9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Huiyouliang9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Junyundu9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaterialName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mohehouzhuangbenggai" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Neiya9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Peitaochuangjia" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Photo" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Pingjunyouliang1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Pingjunyouliang9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessRouteMID" type="xs:int" />
+          <xs:element minOccurs="0" name="Qiya1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Qiya9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Shiyantaitiaoshi" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteM" nillable="true" type="tns:TB_ProcessRouteM" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteMReference" nillable="true" type="q10:EntityReferenceOfTB_ProcessRouteMElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_ProductionPlan" nillable="true" type="tns:ArrayOfTB_ProductionPlan" />
+          <xs:element minOccurs="0" name="TB_ProductionPlanFromERP" nillable="true" type="tns:ArrayOfTB_ProductionPlanFromERP" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q10:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:ArrayOfTB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkTime" nillable="true" type="tns:ArrayOfTB_WorkTime" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tiqianxingcheng9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Yuxingcheng" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangfujian" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuanghuiyoudiancifa" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu10" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu11" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu12" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu13" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu14" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu15" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu16" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhuangsu9" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Zhusai" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_MaterialInfo" nillable="true" type="tns:TB_MaterialInfo" />
+  <xs:complexType name="TB_ProcessRouteM">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Creator" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsUse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessRouteMCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessRouteMName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessRouteP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_MaterialInfo" nillable="true" type="tns:ArrayOfTB_MaterialInfo" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteP" nillable="true" type="tns:ArrayOfTB_ProcessRouteP" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q11:EntityReferenceOfTB_UserElG_Pkl9z" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_ProcessRouteM" nillable="true" type="tns:TB_ProcessRouteM" />
+  <xs:complexType name="ArrayOfTB_MaterialInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_MaterialInfo" nillable="true" type="tns:TB_MaterialInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_MaterialInfo" nillable="true" type="tns:ArrayOfTB_MaterialInfo" />
+  <xs:complexType name="ArrayOfTB_ProcessRouteP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_ProcessRouteP" nillable="true" type="tns:TB_ProcessRouteP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_ProcessRouteP" nillable="true" type="tns:ArrayOfTB_ProcessRouteP" />
+  <xs:complexType name="TB_ProcessRouteP">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsLast" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsUse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="No" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ProcessRouteM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessRouteMID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteM" nillable="true" type="tns:TB_ProcessRouteM" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteMReference" nillable="true" type="q12:EntityReferenceOfTB_ProcessRouteMElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkStationInfo" nillable="true" type="tns:TB_WorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_WorkStationInfoReference" nillable="true" type="q12:EntityReferenceOfTB_WorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkStationID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_ProcessRouteP" nillable="true" type="tns:TB_ProcessRouteP" />
+  <xs:complexType name="TB_WorkStationInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsUse" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NumberClassPerDay" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_ProcessRouteP" nillable="true" type="tns:ArrayOfTB_ProcessRouteP" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:ArrayOfTB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TypeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkStationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkStationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkStationStatu" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkTimePerClass" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkStationInfo" nillable="true" type="tns:TB_WorkStationInfo" />
+  <xs:complexType name="ArrayOfTB_SecondWorkStationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_SecondWorkStationInfo" nillable="true" type="tns:ArrayOfTB_SecondWorkStationInfo" />
+  <xs:complexType name="ArrayOfTB_ProductionPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_ProductionPlan" nillable="true" type="tns:TB_ProductionPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_ProductionPlan" nillable="true" type="tns:ArrayOfTB_ProductionPlan" />
+  <xs:complexType name="TB_ProductionPlan">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q14:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:int" />
+          <xs:element minOccurs="0" name="CompleteAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CompleteStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="LineNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaterialID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlanTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Planner" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_MaterialInfo" nillable="true" type="tns:TB_MaterialInfo" />
+          <xs:element minOccurs="0" name="TB_MaterialInfoReference" nillable="true" type="q14:EntityReferenceOfTB_MaterialInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q14:EntityReferenceOfTB_UserElG_Pkl9z" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_ProductionPlan" nillable="true" type="tns:TB_ProductionPlan" />
+  <xs:complexType name="ArrayOfTB_ProductionPlanFromERP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_ProductionPlanFromERP" nillable="true" type="tns:TB_ProductionPlanFromERP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_ProductionPlanFromERP" nillable="true" type="tns:ArrayOfTB_ProductionPlanFromERP" />
+  <xs:complexType name="TB_ProductionPlanFromERP">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q15:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CompleteAmount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CompleteStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="ImportDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ImportUser" type="xs:int" />
+          <xs:element minOccurs="0" name="MatType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlanAmount" type="xs:int" />
+          <xs:element minOccurs="0" name="PlanBeginTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PlanDepartment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlanEndTime" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TB_MaterialInfo" nillable="true" type="tns:TB_MaterialInfo" />
+          <xs:element minOccurs="0" name="TB_MaterialInfoReference" nillable="true" type="q15:EntityReferenceOfTB_MaterialInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_MonthPlanForLED" nillable="true" type="tns:ArrayOfTB_MonthPlanForLED" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q15:EntityReferenceOfTB_UserElG_Pkl9z" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_ProductionPlanFromERP" nillable="true" type="tns:TB_ProductionPlanFromERP" />
+  <xs:complexType name="ArrayOfTB_MonthPlanForLED">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_MonthPlanForLED" nillable="true" type="tns:TB_MonthPlanForLED" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_MonthPlanForLED" nillable="true" type="tns:ArrayOfTB_MonthPlanForLED" />
+  <xs:complexType name="TB_MonthPlanForLED">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q16:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="MonthCasingCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MonthPlanFromErpID" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_ProductionPlanFromERP" nillable="true" type="tns:TB_ProductionPlanFromERP" />
+          <xs:element minOccurs="0" name="TB_ProductionPlanFromERPReference" nillable="true" type="q16:EntityReferenceOfTB_ProductionPlanFromERPElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TodayCasingCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TodayTotalCount" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_MonthPlanForLED" nillable="true" type="tns:TB_MonthPlanForLED" />
+  <xs:complexType name="ArrayOfTB_WorkDtl">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_WorkDtl" nillable="true" type="tns:TB_WorkDtl" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_WorkDtl" nillable="true" type="tns:ArrayOfTB_WorkDtl" />
+  <xs:complexType name="ArrayOfTB_WorkTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_WorkTime" nillable="true" type="tns:TB_WorkTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_WorkTime" nillable="true" type="tns:ArrayOfTB_WorkTime" />
+  <xs:complexType name="TB_WorkTime">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q17:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EditTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Editor" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="MaterialID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_MaterialInfo" nillable="true" type="tns:TB_MaterialInfo" />
+          <xs:element minOccurs="0" name="TB_MaterialInfoReference" nillable="true" type="q17:EntityReferenceOfTB_MaterialInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q17:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q17:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkTimePerMaterial" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkTime" nillable="true" type="tns:TB_WorkTime" />
+  <xs:complexType name="ArrayOfTB_ScanRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_ScanRecord" nillable="true" type="tns:TB_ScanRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_ScanRecord" nillable="true" type="tns:ArrayOfTB_ScanRecord" />
+  <xs:complexType name="TB_ScanRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q18:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="ScanDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q18:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q18:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:TB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkDtlReference" nillable="true" type="q18:EntityReferenceOfTB_WorkDtlElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkDtlID" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkerID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_ScanRecord" nillable="true" type="tns:TB_ScanRecord" />
+  <xs:complexType name="ArrayOfTB_WorkException">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_WorkException" nillable="true" type="tns:TB_WorkException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_WorkException" nillable="true" type="tns:ArrayOfTB_WorkException" />
+  <xs:complexType name="TB_WorkException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q19:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExceptionID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_Exception" nillable="true" type="tns:TB_Exception" />
+          <xs:element minOccurs="0" name="TB_ExceptionReference" nillable="true" type="q19:EntityReferenceOfTB_ExceptionElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q19:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q19:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_WorkDtl" nillable="true" type="tns:TB_WorkDtl" />
+          <xs:element minOccurs="0" name="TB_WorkDtlReference" nillable="true" type="q19:EntityReferenceOfTB_WorkDtlElG_Pkl9z" />
+          <xs:element minOccurs="0" name="WorkDtlID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkMen" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkException" nillable="true" type="tns:TB_WorkException" />
+  <xs:complexType name="ArrayOfTB_KeyComponentsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_KeyComponentsInfo" nillable="true" type="tns:TB_KeyComponentsInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_KeyComponentsInfo" nillable="true" type="tns:ArrayOfTB_KeyComponentsInfo" />
+  <xs:complexType name="TB_KeyComponentsInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q20:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssistManufacturers" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="KeyComponentsName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RecordDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Recorder" type="xs:int" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_MatCodeKeyComLink" nillable="true" type="tns:ArrayOfTB_MatCodeKeyComLink" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q20:EntityReferenceOfTB_UserElG_Pkl9z" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_KeyComponentsInfo" nillable="true" type="tns:TB_KeyComponentsInfo" />
+  <xs:complexType name="ArrayOfTB_MatCodeKeyComLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_MatCodeKeyComLink" nillable="true" type="tns:TB_MatCodeKeyComLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_MatCodeKeyComLink" nillable="true" type="tns:ArrayOfTB_MatCodeKeyComLink" />
+  <xs:complexType name="TB_MatCodeKeyComLink">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q21:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BandingDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="KeyComponentsID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MatCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_KeyComponentsInfo" nillable="true" type="tns:TB_KeyComponentsInfo" />
+          <xs:element minOccurs="0" name="TB_KeyComponentsInfoReference" nillable="true" type="q21:EntityReferenceOfTB_KeyComponentsInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q21:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_MatCodeKeyComLink" nillable="true" type="tns:TB_MatCodeKeyComLink" />
+  <xs:complexType name="ArrayOfTB_ProcessRouteM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_ProcessRouteM" nillable="true" type="tns:TB_ProcessRouteM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_ProcessRouteM" nillable="true" type="tns:ArrayOfTB_ProcessRouteM" />
+  <xs:complexType name="ArrayOfTB_SystemLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_SystemLog" nillable="true" type="tns:TB_SystemLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_SystemLog" nillable="true" type="tns:ArrayOfTB_SystemLog" />
+  <xs:complexType name="TB_SystemLog">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q22:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Recorder" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SysLog" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q22:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="Time" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_SystemLog" nillable="true" type="tns:TB_SystemLog" />
+  <xs:complexType name="ArrayOfTB_UserLoginRight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_UserLoginRight" nillable="true" type="tns:TB_UserLoginRight" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_UserLoginRight" nillable="true" type="tns:ArrayOfTB_UserLoginRight" />
+  <xs:complexType name="TB_UserLoginRight">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q23:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsUse" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q23:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q23:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_UserLoginRight" nillable="true" type="tns:TB_UserLoginRight" />
+  <xs:complexType name="TB_WorkClasses">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q24:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClassCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberClassPerDay" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PersonInCharge" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:ArrayOfTB_User" />
+          <xs:element minOccurs="0" name="WorkBeginTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="WorkerNumber" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkClasses" nillable="true" type="tns:TB_WorkClasses" />
+  <xs:complexType name="ArrayOfTB_User">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_User" nillable="true" type="tns:TB_User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_User" nillable="true" type="tns:ArrayOfTB_User" />
+  <xs:complexType name="ArrayOfTB_WorkDtlForEachStation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_WorkDtlForEachStation" nillable="true" type="tns:TB_WorkDtlForEachStation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_WorkDtlForEachStation" nillable="true" type="tns:ArrayOfTB_WorkDtlForEachStation" />
+  <xs:complexType name="ArrayOfTB_WorkMain">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_WorkMain" nillable="true" type="tns:TB_WorkMain" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_WorkMain" nillable="true" type="tns:ArrayOfTB_WorkMain" />
+  <xs:complexType name="ArrayOfTB_WorkTimeBandingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_WorkTimeBandingInfo" nillable="true" type="tns:TB_WorkTimeBandingInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_WorkTimeBandingInfo" nillable="true" type="tns:ArrayOfTB_WorkTimeBandingInfo" />
+  <xs:complexType name="TB_WorkTimeBandingInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q25:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Recorder" type="xs:int" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q25:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_User" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_User1" nillable="true" type="tns:TB_User" />
+          <xs:element minOccurs="0" name="TB_User1Reference" nillable="true" type="q25:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_UserReference" nillable="true" type="q25:EntityReferenceOfTB_UserElG_Pkl9z" />
+          <xs:element minOccurs="0" name="Worker" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_WorkTimeBandingInfo" nillable="true" type="tns:TB_WorkTimeBandingInfo" />
+  <xs:complexType name="TB_PLCAdressWithWorkStationInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q26:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfirmPalletArrived" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsUse" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PalletCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PalletCode2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PositCode" type="xs:int" />
+          <xs:element minOccurs="0" name="PositCodeConfirm" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PositCodeDemand" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PositCodeLock" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PositCodeSecede" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReleasePallet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RequirePallet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ScanPalletCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondWorkStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:ArrayOfTB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="ToPositCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToPositCode2" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_PLCAdressWithWorkStationInfo" nillable="true" type="tns:TB_PLCAdressWithWorkStationInfo" />
+  <xs:complexType name="ArrayOfTB_PLCBaseAdressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_PLCBaseAdressInfo" nillable="true" type="tns:TB_PLCBaseAdressInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_PLCBaseAdressInfo" nillable="true" type="tns:ArrayOfTB_PLCBaseAdressInfo" />
+  <xs:complexType name="TB_PLCBaseAdressInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q27:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Adress" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Data" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsUse" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MDType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecondStationID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SecondType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StopperID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TB_PLCAdressWithStopper" nillable="true" type="tns:TB_PLCAdressWithStopper" />
+          <xs:element minOccurs="0" name="TB_PLCAdressWithStopperReference" nillable="true" type="q27:EntityReferenceOfTB_PLCAdressWithStopperElG_Pkl9z" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfo" nillable="true" type="tns:TB_SecondWorkStationInfo" />
+          <xs:element minOccurs="0" name="TB_SecondWorkStationInfoReference" nillable="true" type="q27:EntityReferenceOfTB_SecondWorkStationInfoElG_Pkl9z" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_PLCBaseAdressInfo" nillable="true" type="tns:TB_PLCBaseAdressInfo" />
+  <xs:complexType name="TB_PLCAdressWithStopper">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q28="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q28:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="No" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PalletCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StopperCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StopperLock" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StopperName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TB_PLCBaseAdressInfo" nillable="true" type="tns:ArrayOfTB_PLCBaseAdressInfo" />
+          <xs:element minOccurs="0" name="ToPositCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_PLCAdressWithStopper" nillable="true" type="tns:TB_PLCAdressWithStopper" />
+</xs:schema>

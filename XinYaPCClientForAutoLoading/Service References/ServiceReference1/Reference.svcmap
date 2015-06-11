@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="806e816e-5476-461d-ae85-45f5718b9ddf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.8:8989/wcf/metadata" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="metadata.xsd" MetadataType="Schema" ID="e5cf4884-9d98-483a-8a9f-74f1915c6b5c" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata?xsd=xsd2" />
+    <MetadataFile FileName="metadata1.xsd" MetadataType="Schema" ID="7a8ad45f-4306-4a7a-a768-495d394535e8" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata?xsd=xsd1" />
+    <MetadataFile FileName="metadata2.xsd" MetadataType="Schema" ID="f175eaec-fc34-4216-b9da-4d9dcbea42a5" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="f3d09e2e-76f6-42e6-bc97-6c4c8db65d4c" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata" />
+    <MetadataFile FileName="metadata3.xsd" MetadataType="Schema" ID="4407ce60-57d3-45d4-aeaf-c02994821dfb" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata?xsd=xsd5" />
+    <MetadataFile FileName="metadata4.xsd" MetadataType="Schema" ID="a439855b-3d93-447a-8b8e-c954f1f8d4cf" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata?xsd=xsd4" />
+    <MetadataFile FileName="metadata5.xsd" MetadataType="Schema" ID="2831b70c-f9bf-4c5d-aeab-e177648a5c54" SourceId="1" SourceUrl="http://192.168.1.8:8989/wcf/metadata?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
